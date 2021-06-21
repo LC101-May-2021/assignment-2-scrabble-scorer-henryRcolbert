@@ -155,7 +155,7 @@ function transform(oldPointStructure) {
        // oldPointStructure[key];
        let newKey = oldPointStructure[key]; 
         newKey = String(newKey); 
-       
+       // console.log(newKey);
     for(i = 0; i < newKey.length; i++){
       let kiki = newKey[i]; 
       
