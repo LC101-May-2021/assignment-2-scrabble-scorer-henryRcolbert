@@ -153,7 +153,8 @@ function transform(oldPointStructure) {
  let newStruct = {};
   for(const key in oldPointStructure) {
        // oldPointStructure[key];
-       let newKey = oldPointStructure[key];
+       let newKey = oldPointStructure[key]; 
+        newKey = String(newKey); 
        
     for(i = 0; i < newKey.length; i++){
       let kiki = newKey[i]; 
@@ -161,7 +162,7 @@ function transform(oldPointStructure) {
    // console.log(newKey[i]); the array of chars 
    // console.log(key)  the values
       newStruct[kiki] = Number(key);
-       
+      
        
        // newStruct[newKey] = newKey[i];
       
@@ -176,10 +177,8 @@ return newStruct;
 let newPointStructure = transform(oldPointStructure);
 
 
-/*
-for(item in newPointStructure) {
-  console.log(item , newPointStructure[item]);
-} */
+
+
 
 function runProgram() {
    
@@ -188,6 +187,7 @@ function runProgram() {
    let ans = scorerPrompt(); 
 
    console.log("score for " + str + ": " + scoringAlgorithms[ans].scorerFunction(str));
+   
    
    /*
    let simpScore =  simpleScore(str); 
