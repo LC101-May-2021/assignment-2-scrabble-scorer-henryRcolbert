@@ -160,7 +160,7 @@ function transform(oldPointStructure) {
       
    // console.log(newKey[i]); the array of chars 
    // console.log(key)  the values
-      newStruct[kiki] = key;
+      newStruct[kiki] = Number(key);
        
        
        // newStruct[newKey] = newKey[i];
@@ -175,7 +175,11 @@ return newStruct;
 
 let newPointStructure = transform(oldPointStructure);
 
-// let str = "";
+
+/*
+for(item in newPointStructure) {
+  console.log(item , newPointStructure[item]);
+} */
 
 function runProgram() {
    
